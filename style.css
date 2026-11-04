@@ -1,0 +1,139 @@
+/* Universal Reset & Modern Typography */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Prevents layout breakdown */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Premium Gradient Background */
+body {
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+/* Glassmorphism Outer Container */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 2rem;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+/* Dynamic Typography with Glow */
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: .5rem;
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+/* Centered Responsive Game Grid */
+.game {
+  height: 60vmin;
+  width: 60vmin;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  justify-content: center;
+  align-content: center;
+  margin-bottom: 2rem;
+}
+
+/* Premium Interactive Grid Boxes */
+.box {
+  height: 18vmin;
+  width: 18vmin;
+  background: rgba(255, 255, 255, 0.08);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Box Hover & Active Action Adjustments */
+.box:hover {
+  transform: translateY(-4px) scale(1.05);
+  background: rgba(255, 255, 255, 0.15);
+  border-color: #00f2fe; /* Neon cyan border glow */
+  box-shadow: 0 0 20px rgba(0, 242, 254, 0.4);
+}
+
+.box:active {
+  transform: scale(0.95);
+}
+
+/* Styled Modern Reset Button */
+.reset-btn {
+  padding: 0.8rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(5px);
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.reset-btn:hover {
+  background: #ff416c; /* Coral warning color shift */
+  border-color: transparent;
+  box-shadow: 0 8px 20px rgba(255, 65, 108, 0.4);
+  transform: translateY(-2px);
+}
+
+.reset-btn:active {
+  transform: translateY(1px) scale(0.98);
+}
+
+/* Pop-out Winning Alert Message Styling */
+#msg {
+  background: linear-gradient(135deg, #00c6ff 0%, #0072ff 100%);
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 600;
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  box-shadow: 0 10px 25px rgba(0, 114, 255, 0.4);
+  letter-spacing: 0.5px;
+  margin-bottom: 2rem;
+  animation: popIn 0.4s ease-out forwards;
+}
+
+/* Utility Class to Hide Message Cleanly */
+.hide {
+  display: none !important;
+}
+
+/* Smooth Entrance Keyframe for Winner Alerts */
+@keyframes popIn {
+  0% { transform: scale(0.7); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
